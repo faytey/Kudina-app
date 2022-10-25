@@ -11,3 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.vwot-50{
+  width: 50vw;
+}
+.bg-green{
+  background-color: #00A150
+}
+@media (max-width: 768px){
+  .vwot-50{
+    width: 100vw;
+  }
+}

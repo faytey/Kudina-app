@@ -1,23 +1,29 @@
 import logo from './logo.svg';
 import './App.css';
+import SplashScreen from './pages/SplashScreen';
+import SignUp from './pages/Signup';
+import {useState, useEffect} from "react"
+
+
 
 function App() {
+
+  const[showScreen, setShowScreen] = useState(true)
+  
+  const timer = setInterval(() => {return ;}, 4000)
+
+  useEffect(() => {
+
+    async function work(){
+      await timer;
+      setShowScreen(false)
+    }
+    work()
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <div className="vwot-50 mx-md-auto border vh-100">
+      {showScreen ? <SplashScreen />: <SignUp />}
     </div>
   );
 }
