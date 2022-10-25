@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+<<<<<<< HEAD
 import {
   BrowserRouter as Router,
   Switch,
@@ -7,24 +8,32 @@ import {
   Link
 } from "react-router-dom";
 git 
+=======
+import SplashScreen from './pages/SplashScreen';
+import SignUp from './pages/Signup';
+import {useState, useEffect} from "react"
+
+
+>>>>>>> a18d7983926a05666e6cff6e2e1a432044731a1e
 
 function App() {
+
+  const[showScreen, setShowScreen] = useState(true)
+  
+  const timer = setInterval(() => {return ;}, 4000)
+
+  useEffect(() => {
+
+    async function work(){
+      await timer;
+      setShowScreen(false)
+    }
+    work()
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <div className="vwot-50 mx-md-auto border vh-100">
+      {showScreen ? <SplashScreen />: <SignUp />}
     </div>
   );
 }
