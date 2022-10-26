@@ -6,7 +6,7 @@ const [email, setEmail] = useState('');
 const [password, setPassword] = useState('');
 
 useEffect(() => {
-   if(email!="" && password!=""){
+   if(email!=="" && password!==""){
     setFilledForm(true)
    }else{
     setFilledForm(false)
