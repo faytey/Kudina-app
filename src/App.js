@@ -3,6 +3,9 @@ import './App.css';
 import SplashScreen from './pages/SplashScreen';
 import SignUp from './pages/Signup';
 import {useState, useEffect} from "react"
+import Dashboard from './pages/Dashboard';
+import NavTab from './components/NavTab';
+import AddUser from './pages/AddUser';
 
 
 
@@ -22,8 +25,9 @@ function App() {
   }, [])
 
   return (
-     <div className="vwot-50 mx-md-auto border vh-100">
-      {showScreen ? <SplashScreen />: <SignUp />}
+     <div className="vw-md-50 vh-100 mx-md-auto border bg-secondary">
+      {/* {showScreen ? <SplashScreen />: <SignUp />} */}
+
     </div>
   );
 }
